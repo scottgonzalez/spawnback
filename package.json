@@ -1,7 +1,7 @@
 {
   "name": "spawnback",
   "description": "Simplified process spawning with buffered output in a callback",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/scottgonzalez/spawnback",
   "author": {
     "name": "Scott González",
