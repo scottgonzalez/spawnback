@@ -13,13 +13,17 @@ module.exports = function(/* command, args, options, callback */) {
 		callback( error );
 	});
 
-	child.stdout.on( "data", function( data ) {
-		stdout += data;
-	});
+	if (child.stdout) {
+			child.stdout.on( "data", function( data ) {
+			stdout += data;
+		});
+	}
 
-	child.stderr.on( "data", function( data ) {
-		stderr += data;
-	});
+	if (child.stderr) {
+		child.stderr.on( "data", function( data ) {
+			stderr += data;
+		});
+	}
 
 	child.on( "close", function( code ) {
 		if ( hadError ) {
